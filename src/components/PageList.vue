@@ -1,16 +1,12 @@
 <template>
-  <div>
-    <h4>{{ 블로그글[0].title }}</h4>
-    <p>{{ 블로그글[0].date }}</p>
+
+
+  <div v-for="(item, index) in 블로그글" :key="index">
+    <h4 @click="$router.push('/detail/{{index}}')">{{ item.title }}</h4>
+    <p>{{ item.date }}</p>
   </div>
-  <div>
-    <h4>{{ 블로그글[1].title }}</h4>
-    <p>{{ 블로그글[1].date }}</p>
-  </div>
-  <div>
-    <h4>{{ 블로그글[2].title }}</h4>
-    <p>{{ 블로그글[2].date }}</p>
-  </div>
+
+
 </template>
 
 <script>
